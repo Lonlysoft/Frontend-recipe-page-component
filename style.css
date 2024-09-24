@@ -1,0 +1,132 @@
+:root{
+	--bg-color: hsl(30, 54%, 90%);
+	--title-color: hsl(332, 51%, 32%);
+	--unit-bg: hsl(0, 0%, 100%);
+	--adjacent-color: hsl(14, 45%, 36%);
+	--liner-color: hsl(30, 18%, 87%);
+	--main-font-color: hsl(30, 10%, 34%);
+	--preparation-font: hsl(332, 51%, 32%);
+	--preparation-bg: hsl(330, 100%, 98%);
+}
+
+@font-face{
+	font-family: "YoungSerif-Regular";
+	src: local("YoungSerif-Regular"), url("assets/fonts/YoungSerif-Regular.ttf")format('truetype'));
+	font-display: swap;
+}
+
+.unit{
+	max-width: 700px;
+	padding: 2.5em;
+	background-color: var(--unit-bg);
+	border-radius: 1em;
+	font-family: "Outfit", sans-serif;
+}
+
+img{
+	width: 100%;
+	border-radius: 0.5em;
+}
+
+h1, h2{
+	font-family: "Young Serif";
+	font-weight: 400;
+}
+
+h2{
+	color: var(--adjacent-color);
+}
+
+ul{
+	padding: 0;
+	margin-left:0.5em;
+	border-bottom: 1px solid var(--liner-color);
+}
+
+li{
+	margin: 1.5em;
+	padding-left: 1em;
+	color: var(--main-font-color);
+}
+
+ul li::marker{
+	color: var(--adjacent-color);
+	text-align: center;
+}
+
+ol{
+	padding-left: 1em;
+	border-bottom: 1px solid var(--liner-color);
+}
+
+ol li::marker{
+	color: var(--adjacent-color);
+	font-weight: 700;
+	margin-right: 2em;
+}
+
+.dishInfo{
+	padding: 2em;
+	background-color: var(--preparation-bg);
+	font-weight: 700;
+	color: var(--preparation-font);
+	border: none;
+}
+.dishInfo li{
+	font-weight: 400;
+}
+
+body{
+	margin: 0;
+	width: 100vw;
+	margin: 15% 0;
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+	background-color: var(--bg-color);
+	color: var(--main-font-color);
+}
+
+/*related to the table*/
+.name{
+	width: 40%;
+}
+.quant{
+	color: var(--adjacent-color);
+	width: 50%;
+	font-weight: 600;
+}
+
+.table{
+	font-size: 1.2em;
+}
+
+.row{
+	display: flex;
+	justify-content: center;
+	padding: 1em;
+	border-bottom: 1px solid var(--liner-color);
+	max-width: 100%;
+}
+
+.row:nth-child(4){
+	border: none;
+}
+
+@media (max-width: 500px){
+	.unit{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		border-radius: 0;
+	}
+	.textImageSeparator{
+		padding: 0 2em;
+	}
+	body{
+		margin: 0;
+	}
+	img{
+		border-radius: 0;
+	}
+}
